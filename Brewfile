@@ -19,3 +19,6 @@ brew "neovim"
 brew "lazygit"
 brew "gh"
 brew "fnm"
+
+# Fonts
+cask "font-cascadia-code"

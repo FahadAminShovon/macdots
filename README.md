@@ -9,6 +9,8 @@ Personal dotfiles for macOS.
 ├── Brewfile         # Homebrew packages
 ├── install.sh       # Main installer (brew packages + symlinks)
 ├── symlink.sh       # Just creates symlinks
+├── fonts.sh         # Font installation
+├── gh-aliases.sh    # GitHub CLI aliases
 ├── home/
 │   └── .zshrc       # Zsh configuration
 └── config/
@@ -49,12 +51,16 @@ cd ~/.macdots
 - gh (GitHub CLI)
 - fnm (Node.js version manager)
 
+**Fonts:**
+- Cascadia Code (VSCode & terminal font)
+
 ## Post-install
 
 1. Restart terminal or `source ~/.zshrc`
 2. Run `p10k configure` for Powerlevel10k theme setup
 3. Run `gh auth login` to authenticate GitHub CLI
 4. Run `~/.macdots/gh-aliases.sh` to set up gh aliases
+5. Run `~/.macdots/fonts.sh` to install Cascadia Code font (or set in VSCode/terminal manually)
 
 See [GH-ALIASES.md](GH-ALIASES.md) for the full list of GitHub CLI aliases.
 
