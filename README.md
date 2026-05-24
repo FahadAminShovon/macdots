@@ -83,3 +83,10 @@ brew bundle --file ~/.macdots/Brewfile
 ## Backup
 
 Existing files are backed up to `~/.macdots_backup/` before symlinking.
+
+## Troubleshooting
+
+If scripts don't run, make them executable:
+```bash
+chmod +x ~/.macdots/*.sh
+```
