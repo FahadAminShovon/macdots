@@ -1,0 +1,16 @@
+# Neovim (NvChad bootstraps itself)
+config/nvim/
+
+# Backup files
+*.bak
+*~
+
+# OS
+.DS_Store
+
+# GitHub CLI (contains sensitive data)
+config/gh/
+
+# Ghostty (may contain sensitive paths)
+# Uncomment if you want to exclude ghostty config
+# config/ghostty/
