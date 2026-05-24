@@ -22,3 +22,4 @@ brew "fnm"
 
 # Fonts
 cask "font-cascadia-code"
+cask "font-jetbrains-mono-nerd-font"

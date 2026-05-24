@@ -51,7 +51,8 @@ cd ~/.macdots
 - fnm (Node.js version manager)
 
 **Fonts:**
-- Cascadia Code (VSCode & terminal font)
+- Cascadia Code
+- JetBrainsMono Nerd Font
 
 ## Post-install
 
@@ -59,7 +60,9 @@ cd ~/.macdots
 2. Run `p10k configure` for Powerlevel10k theme setup
 3. Run `gh auth login` to authenticate GitHub CLI
 4. Run `~/.macdots/gh-aliases.sh` to set up gh aliases
-5. Set Cascadia Code as font in VSCode/terminal (installed via Brewfile)
+5. Set fonts in VSCode/terminal:
+   - Cascadia Code for editor
+   - JetBrainsMono Nerd Font for terminal
 
 See [GH-ALIASES.md](GH-ALIASES.md) for the full list of GitHub CLI aliases.
 
