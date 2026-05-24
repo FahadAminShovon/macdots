@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Symlink script for macdots
-# Creates symlinks from macdots to home directory
+# Symlink script for .macdots
+# Creates symlinks from .macdots to home directory
 
 set -e
 
-MACDOTS="$HOME/macdots"
+MACDOTS="$HOME/.macdots"
 BACKUP_DIR="$HOME/.macdots_backup"
 
 # Colors

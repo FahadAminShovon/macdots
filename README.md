@@ -1,11 +1,11 @@
-# macdots
+# .macdots
 
 Personal dotfiles for macOS.
 
 ## Structure
 
 ```
-macdots/
+.macdots/
 ├── install.sh       # Main installer (brew packages + symlinks)
 ├── symlink.sh       # Just creates symlinks
 ├── home/
@@ -19,8 +19,9 @@ macdots/
 ## Installation
 
 ```bash
-# Clone or move macdots to home directory
-cd ~/macdots
+# Clone to home directory (note the dot prefix)
+git clone https://github.com/FahadAminShovon/macdots.git ~/.macdots
+cd ~/.macdots
 
 # Run installer (installs brew packages + creates symlinks)
 ./install.sh
