@@ -6,6 +6,7 @@ Personal dotfiles for macOS.
 
 ```
 .macdots/
+├── Brewfile         # Homebrew packages
 ├── install.sh       # Main installer (brew packages + symlinks)
 ├── symlink.sh       # Just creates symlinks
 ├── home/
@@ -60,6 +61,14 @@ If you already have packages installed and just want to update symlinks:
 
 ```bash
 ./symlink.sh
+```
+
+## Just install packages
+
+To only install Homebrew packages without touching symlinks:
+
+```bash
+brew bundle --file ~/.macdots/Brewfile
 ```
 
 ## Backup

@@ -22,26 +22,13 @@ fi
 echo -e "${GREEN}Updating Homebrew...${NC}"
 brew update
 
-# Install all packages
-echo -e "${GREEN}Installing packages...${NC}"
-brew install \
-    powerlevel10k \
-    zsh-autosuggestions \
-    zsh-syntax-highlighting \
-    zoxide \
-    eza \
-    bat \
-    neovim \
-    gh \
-    lazygit \
-    fzf \
-    fd \
-    ripgrep \
-    fnm
+# Install all packages from Brewfile
+echo -e "${GREEN}Installing packages from Brewfile...${NC}"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+brew bundle --file "$SCRIPT_DIR/Brewfile"
 
 # Run symlink script
 echo -e "${GREEN}Setting up symlinks...${NC}"
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 "$SCRIPT_DIR/symlink.sh"
 
 echo -e "${GREEN}Installation complete!${NC}"
