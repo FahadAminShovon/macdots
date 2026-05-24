@@ -7,8 +7,9 @@ Personal dotfiles for macOS.
 ```
 .macdots/
 ├── Brewfile         # Homebrew packages + fonts
-├── install.sh       # Main installer (brew packages + symlinks)
+├── install.sh       # Main installer (brew packages + symlinks + macOS settings)
 ├── symlink.sh       # Just creates symlinks
+├── macos.sh         # Optional macOS system settings
 ├── gh-aliases.sh    # GitHub CLI aliases
 ├── home/
 │   └── .zshrc       # Zsh configuration
@@ -81,6 +82,17 @@ To only install Homebrew packages without touching symlinks:
 ```bash
 brew bundle --file ~/.macdots/Brewfile
 ```
+
+## macOS System Settings
+
+Run `macos.sh` to apply optional macOS defaults (prompts before each change):
+
+```bash
+~/.macdots/macos.sh
+```
+
+**Currently configured:**
+- Disable press-and-hold (enables key repeat for better coding experience)
 
 ## Backup
 
