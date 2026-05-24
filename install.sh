@@ -31,6 +31,15 @@ brew bundle --file "$SCRIPT_DIR/Brewfile"
 echo -e "${GREEN}Setting up symlinks...${NC}"
 "$SCRIPT_DIR/symlink.sh"
 
+# Install Neovim plugins (NvChad)
+echo -e "${GREEN}Installing Neovim plugins...${NC}"
+if command -v nvim &> /dev/null; then
+    nvim --headless "+Lazy! sync" +qa > /dev/null 2>&1
+    echo -e "${GREEN}✓ Neovim plugins installed${NC}"
+else
+    echo -e "${YELLOW}⚠ Neovim not found, skipping plugin installation${NC}"
+fi
+
 echo -e "${GREEN}Installation complete!${NC}"
 echo -e "${YELLOW}Next steps:${NC}"
 echo "  1. Restart your terminal or run 'source ~/.zshrc'"
