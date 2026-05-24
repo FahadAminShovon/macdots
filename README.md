@@ -54,6 +54,9 @@ cd ~/.macdots
 1. Restart terminal or `source ~/.zshrc`
 2. Run `p10k configure` for Powerlevel10k theme setup
 3. Run `gh auth login` to authenticate GitHub CLI
+4. Run `~/.macdots/gh-aliases.sh` to set up gh aliases
+
+See [GH-ALIASES.md](GH-ALIASES.md) for the full list of GitHub CLI aliases.
 
 ## Just update symlinks
 
