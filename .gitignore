@@ -14,3 +14,6 @@ config/gh/
 # Ghostty (may contain sensitive paths)
 # Uncomment if you want to exclude ghostty config
 # config/ghostty/
+
+# Local zsh aliases (machine-specific, not tracked)
+config/zsh/local.zsh
