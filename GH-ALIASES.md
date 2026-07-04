@@ -16,6 +16,7 @@ Custom `gh` aliases for faster workflow.
 | `gh ps` | `git push -u origin HEAD` | Push and set upstream |
 | `gh up` | `git pull --rebase` | Pull with rebase |
 | `gh start <branch>` | `gh up && git switch -c "$1"` | Pull and create new branch |
+| `gh cleanup` | `git branch \| grep -vE ... \| xargs git branch -D` | Delete all branches except main, master, staging, qa, and current |
 
 ## Usage Examples
 
@@ -31,4 +32,7 @@ gh up
 
 # Create new feature branch from latest main
 gh start feature/new-feature
+
+# Delete all local branches except main, master, staging, qa, and current branch
+gh cleanup
 ```
