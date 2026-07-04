@@ -13,3 +13,6 @@ alias catn='bat -n'          # with line numbers
 alias nvimdiff='nvim -d'
 alias vi='nvim'
 alias vim='nvim'
+
+# killport <port> — a function, kept in its own file, sourced here.
+[[ -r "${0:A:h}/killport.zsh" ]] && source "${0:A:h}/killport.zsh"
