@@ -15,5 +15,5 @@ config/gh/
 # Uncomment if you want to exclude ghostty config
 # config/ghostty/
 
-# Local zsh config (machine-specific, not tracked)
-config/zsh/local-aliases.zsh
+# Local zsh config (machine-specific / secrets, not tracked)
+config/zsh/local*.zsh
