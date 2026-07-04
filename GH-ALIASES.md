@@ -18,6 +18,8 @@ Custom `gh` aliases for faster workflow.
 | `gh up` | `git pull --rebase` | Pull with rebase |
 | `gh start <branch>` | `gh up && git switch -c "$1"` | Pull and create new branch |
 | `gh cleanup` | `git branch \| grep -vE ... \| xargs git branch -D` | Delete all branches except main, master, staging, qa, and current |
+| `gh cleanup-worktree` | `git worktree list ... \| git worktree remove --force` | Remove all linked worktrees (keeps the main working tree), then prune |
+| `gh cleanup-all` | worktree removal + branch cleanup | Remove all linked worktrees, then delete all branches except main, master, staging, qa, and current |
 
 ## Usage Examples
 
@@ -39,4 +41,10 @@ gh start feature/new-feature
 
 # Delete all local branches except main, master, staging, qa, and current branch
 gh cleanup
+
+# Remove all linked worktrees (keeps the main working tree)
+gh cleanup-worktree
+
+# Remove all linked worktrees, then delete all branches except main, master, staging, qa, and current
+gh cleanup-all
 ```
