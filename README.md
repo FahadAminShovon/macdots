@@ -14,9 +14,15 @@ Personal dotfiles for macOS.
 ├── home/
 │   └── .zshrc       # Zsh configuration
 └── config/
-    ├── zsh/         # Zsh modules (env, plugins, aliases, etc.)
-    ├── nvim/        # Neovim configuration (NvChad)
-    └── ghostty/     # Ghostty terminal config
+    ├── zsh/             # Zsh modules (env, plugins, aliases, completion, ...)
+    │   ├── aliases.zsh  # Shell aliases (eza, bat, nvim, ...)
+    │   ├── functions/   # One file per function + index.zsh barrel loader
+    │   │   ├── index.zsh    # Sources every *.zsh in this folder
+    │   │   ├── killport.zsh # killport <port> — kill process on a TCP port
+    │   │   └── mkcd.zsh     # mkcd <dir> — mkdir -p + cd
+    │   └── local.zsh    # Machine-specific config + secrets (git-ignored)
+    ├── nvim/            # Neovim configuration (NvChad)
+    └── ghostty/         # Ghostty terminal config
 ```
 
 ## Installation
@@ -66,6 +72,31 @@ cd ~/.macdots
    - JetBrainsMono Nerd Font for terminal
 
 See [GH-ALIASES.md](GH-ALIASES.md) for the full list of GitHub CLI aliases.
+
+## Zsh functions
+
+Functions live under `config/zsh/functions/`, one file per function. `index.zsh`
+is a barrel that sources every `*.zsh` in the folder, so **adding a function is
+just dropping a new `<name>.zsh` there** — no wiring needed.
+
+| Function | Description |
+| --- | --- |
+| `killport <port>` | Kill whatever process is listening on the given TCP port |
+| `mkcd <dir>` | `mkdir -p` a directory then `cd` into it |
+
+## Local / machine-specific config
+
+`config/zsh/local.zsh` holds machine-specific settings and **secrets** (API keys,
+per-machine PATHs, personal aliases). It is **git-ignored** (`local*.zsh`) and
+sourced by `.zshrc` only if present, so each machine keeps its own untracked
+copy and no secrets land in git. Create it as needed:
+
+```bash
+cat > ~/.config/zsh/local.zsh <<'EOF'
+export SOME_API_KEY="..."
+export PATH="/opt/homebrew/bin:$PATH"
+EOF
+```
 
 ## Just update symlinks
 
