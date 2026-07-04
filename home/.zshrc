@@ -13,7 +13,7 @@ ZSHCFG="${HOME}/.config/zsh"
 [[ -r "${ZSHCFG}/env.zsh" ]] && source "${ZSHCFG}/env.zsh"
 [[ -r "${ZSHCFG}/plugins.zsh" ]] && source "${ZSHCFG}/plugins.zsh"
 [[ -r "${ZSHCFG}/aliases.zsh" ]] && source "${ZSHCFG}/aliases.zsh"
-[[ -r "${ZSHCFG}/functions.zsh" ]] && source "${ZSHCFG}/functions.zsh"
+[[ -r "${ZSHCFG}/functions/index.zsh" ]] && source "${ZSHCFG}/functions/index.zsh"
 [[ -r "${ZSHCFG}/completion.zsh" ]] && source "${ZSHCFG}/completion.zsh"
 
 # Local machine-specific config: secrets, machine paths, personal aliases
